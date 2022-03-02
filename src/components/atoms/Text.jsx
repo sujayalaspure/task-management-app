@@ -16,20 +16,31 @@ const useStyles = makeStyles((theme) => ({
     opacity: ({ fade, color }) => (color && fade ? 0.7 : 1),
   },
 }));
-export const Heading = ({ color, children }) => {
+export const Heading = ({ color, children, variant }) => {
   const classes = useStyles({ color });
   return (
-    <Typography className={classes.heading} variant={"h1"} gutterBottom>
+    <Typography
+      className={classes.heading}
+      variant={variant ?? "h2"}
+      gutterBottom
+    >
       {children}
     </Typography>
   );
 };
 
-const Text = ({ fontSize, color, children, variant = "body1", fade }) => {
+const Text = ({
+  fontSize,
+  color,
+  children,
+  variant = "body1",
+  fade,
+  ...other
+}) => {
   const classes = useStyles({ fontSize, color, fade });
 
   return (
-    <Typography variant={variant} className={classes.text}>
+    <Typography variant={variant} className={classes.text} {...other}>
       {children}
     </Typography>
   );

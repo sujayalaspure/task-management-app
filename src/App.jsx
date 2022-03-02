@@ -1,16 +1,22 @@
 import React from "react";
-import Demo from "./demo";
-import { COLORS } from "./utils/colors";
 import { useTheme } from "@material-ui/core/styles";
+import { AppWrapper, LeftSidebar, MiddleSection, RightSidebar } from "./style";
+import SideBar from "./components/sidebar";
+import MainApp from "./components/main-app";
 const App = () => {
   const theme = useTheme();
 
   console.log(theme.palette.accent);
   return (
-    <div style={{ height: "100vh", backgroundColor: COLORS.bg.primary }}>
-      Hello
-      <Demo />
-    </div>
+    <AppWrapper>
+      <LeftSidebar>
+        <SideBar />
+      </LeftSidebar>
+      <MiddleSection>
+        <MainApp />
+      </MiddleSection>
+      <RightSidebar>right section</RightSidebar>
+    </AppWrapper>
   );
 };
 

@@ -12,12 +12,19 @@ const Demo = () => {
   const theme = useTheme();
   return (
     <div>
-      <div>
+      <ChipWithCount
+        label={"Completed"}
+        count={12}
+        color={theme.palette.accent.green}
+      />
+      <IconButton Icon={Folder} />
+      <IconButton Icon={Group} />
+      <IconButton Icon={Folder} />
+      {/* <div>
         IconButton:
-        <IconButton Icon={Folder} />
-        <IconButton Icon={Group} />
-        <IconButton Icon={Folder} />
-      </div>
+        
+      </div> */}
+      <Chip label={"Daily Stand Up"} onDelete={() => {}} />
 
       <div>
         <Heading>Heading:</Heading>
@@ -27,7 +34,7 @@ const Demo = () => {
       <div style={{ width: "200px" }}>
         <Button>Create New Task</Button>
       </div>
-
+      {/*
       <div
         style={{
           margin: "10px",
@@ -56,7 +63,7 @@ const Demo = () => {
 
       <div>
         <InfoCard />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../atoms/Input";
 import Text, { Heading } from "../atoms/Text";
+import InfoSection from "./InfoSection";
 import {
   AppWrapper,
   TopBar,
@@ -23,6 +24,7 @@ const MainApp = () => {
           <Input />
         </InputBaseWrapper>
       </TopBar>
+      <InfoSection />
     </AppWrapper>
   );
 };

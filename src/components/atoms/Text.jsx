@@ -22,7 +22,7 @@ export const Heading = ({ color, children, variant }) => {
     <Typography
       className={classes.heading}
       variant={variant ?? "h2"}
-      gutterBottom
+      // gutterBottom
     >
       {children}
     </Typography>

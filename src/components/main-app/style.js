@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
 `;
 
 export const TopBar = styled.div`
   background-color: white;
-  height: 60px;
-  padding: 0 20px;
+  padding: 15px 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@ export const TopBar = styled.div`
 `;
 
 export const InputBaseWrapper = styled.div`
-  flex: 0.8;
+  flex: 0.6;
 `;
 export const HeadingWrapper = styled.div`
   /* flex: 0.8; */
@@ -30,4 +31,13 @@ export const Divider = styled.div`
   height: 20px;
   width: 1px;
   background-color: #9e9e9e;
+`;
+
+export const InfoWrapper = styled.div`
+  background-color: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid #bdbdbd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

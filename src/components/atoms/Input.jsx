@@ -1,11 +1,10 @@
-import { IconButton, InputBase, Paper, useTheme } from "@material-ui/core";
+import { IconButton, InputBase, Paper } from "@material-ui/core";
 import React from "react";
 import { Search } from "@emotion-icons/boxicons-regular";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Input = () => {
   const classes = useStyles();
-  const { theme } = useTheme();
 
   return (
     <Paper variant="outlined" className={classes.root}>
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 8px",
     display: "flex",
     alignItems: "center",
-    backgroundColor: theme.palette.text.light,
+    backgroundColor: "#a399f733",
     border: 0,
     // width: "60%",
   },
